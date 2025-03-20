@@ -3,7 +3,8 @@
 Efficient, Scalable, and Designed for Production-Like Background Processing in Development
 
 ## 📌 Why This Project?
-This project was built to demonstrate expertise in architecting and managing background job processing in a Rails environment. It leverages Sidekiq, Redis, and ActiveJob to process jobs asynchronously, allowing Rails apps to offload expensive tasks efficiently.
+This was done to build expertise in architecting and managing background job processing in a Rails environment. 
+It leverages Sidekiq, Redis, and ActiveJob to process jobs asynchronously, allowing Rails apps to offload expensive tasks efficiently.
 
 While this is a local-only setup, it mirrors the architecture used in production-scale applications by incorporating: 
 ✅ Sidekiq Web UI for monitoring
