@@ -80,16 +80,22 @@ rails jobs:enqueue_example
 
 ## 🔮 Next Steps (How This Could Be Extended)
 🔹 Add a Dockerized Redis & Sidekiq setup to make this deployable
+
 🔹 Scale Horizontally: Introduce multiple Sidekiq workers with priority queues
+
 🔹 Job Retries & Error Handling: Implement dead-letter queues & custom error tracking
+
 🔹 Monitor Performance: Integrate Prometheus + Grafana for real-time job processing metrics
 
 
 ## 📌 Quick Start Commands
 ```
 redis-server # Start Redis
+
 bundle exec sidekiq # Start Sidekiq
+
 rails s # Start Rails
+
 rails jobs:enqueue_example # Enqueue a job
 ```
 🔥 
