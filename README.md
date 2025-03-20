@@ -1,17 +1,22 @@
-🚀 Sidekiq Job Monitor – A Robust Local Job Queue with Rails + Sidekiq
+# 🚀 Sidekiq Job Monitor – A Robust Local Job Queue with Rails + Sidekiq
+
 Efficient, Scalable, and Designed for Production-Like Background Processing in Development
 
-📌 Why This Project?
+## 📌 Why This Project?
 This project was built to demonstrate expertise in architecting and managing background job processing in a Rails environment. It leverages Sidekiq, Redis, and ActiveJob to process jobs asynchronously, allowing Rails apps to offload expensive tasks efficiently.
 
-While this is a local-only setup, it mirrors the architecture used in production-scale applications by incorporating: ✅ Sidekiq Web UI for monitoring
+While this is a local-only setup, it mirrors the architecture used in production-scale applications by incorporating: 
+✅ Sidekiq Web UI for monitoring
+
 ✅ Explicit Redis connection management
+
 ✅ ActiveJob integration with Sidekiq for seamless queue handling
+
 ✅ Multi-terminal orchestration for job processing
 
 This project was an exercise to build and debug a stack of Rails + Sidekiq + Redis + PostgreSQL, and ensure seamless job execution.
 
-🛠 What This Can Do
+## 🛠 What This Can Do
 ✔️ Process background jobs asynchronously using Sidekiq
 ✔️ Monitor job execution in real time via Sidekiq Web UI
 ✔️ Execute ActiveJob-based jobs that enqueue through Sidekiq
@@ -19,21 +24,26 @@ This project was an exercise to build and debug a stack of Rails + Sidekiq + Red
 
 💡 While this setup is local, it can be extended to a production-grade Sidekiq + Redis cluster in minimal steps.
 
-🛠 Tech Stack
-Rails 7 – Web framework
-Sidekiq 7 – Background job processing
-Redis – In-memory data store for queue management
-PostgreSQL – Database for ActiveRecord persistence
-ActiveJob – Rails' built-in job framework
-Sidekiq Web UI – Real-time job monitoring
-🔍 Key Features
+## 🛠 Tech Stack
+- Rails 7 – Web framework
+- Sidekiq 7 – Background job processing
+- Redis – In-memory data store for queue management
+- PostgreSQL – Database for ActiveRecord persistence
+- ActiveJob – Rails' built-in job framework
+- Sidekiq Web UI – Real-time job monitoring
+
+## 🔍 Key Features
 ✔ Sidekiq Web UI – View and manage background jobs via http://localhost:3000/sidekiq
+
 ✔ Explicit Redis Connection Handling – Ensures Sidekiq and Rails share a common Redis instance
+
 ✔ Resilient Job Processing – Jobs are retried upon failure (configurable)
+
 ✔ Multi-Queue Architecture – Sidekiq prioritizes jobs efficiently with configurable queues
+
 ✔ Fully Automated Local Setup – One command (rails jobs:enqueue_example) triggers the workflow
 
-🚀 How to Run
+## 🚀 How to Run
 1️⃣ Start Redis (Terminal 1 - Redis Tab)
 ```
 redis-server
@@ -59,7 +69,7 @@ rails jobs:enqueue_example
 📌 Open: http://localhost:3000/sidekiq
 ```
 
-🎯 Practice Points
+## 🎯 Practice Points
 🔹 Debugging Across Multiple Services – this project required a good amount debugging across Rails, Sidekiq, Redis, and PostgreSQL, practicing the ability to resolve system-level issues across different layers of the stack.
 
 🔹 Explicit Queue Management – Instead of assuming Rails would handle job execution, I configured Sidekiq queues manually to ensure jobs were actually being enqueued, processed, and retried when necessary.
@@ -68,14 +78,14 @@ rails jobs:enqueue_example
 
 🔹 Ensuring Cross-Service Communication – Managing Redis connections, configuring Sidekiq to use the correct Redis instance, and ensuring Rails’ ActiveJob integration worked seamlessly was key to making this a fully functional setup.
 
-🔮 Next Steps (How This Could Be Extended)
+## 🔮 Next Steps (How This Could Be Extended)
 🔹 Add a Dockerized Redis & Sidekiq setup to make this deployable
 🔹 Scale Horizontally: Introduce multiple Sidekiq workers with priority queues
 🔹 Job Retries & Error Handling: Implement dead-letter queues & custom error tracking
 🔹 Monitor Performance: Integrate Prometheus + Grafana for real-time job processing metrics
 
 
-📌 Quick Start Commands
+## 📌 Quick Start Commands
 ```
 redis-server # Start Redis
 bundle exec sidekiq # Start Sidekiq
